@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--对应接口全类名-->
+<mapper namespace="com.lty.dao.DeptDao">
+
+    <select id="getDeptName" resultType="string">
+        select dept_name
+        from ib_dept
+        where id = #{deptId};
+    </select>
+
+    <resultMap id="getUsers" type="Dept">
+        <collection property="users" select="com.lty.dao.UserDao.getUsers" column="id"></collection>
+    </resultMap>
+    <select id="getDeptUsers" resultMap="getUsers">
+        select * from ib_dept
+        where id = #{deptId};
+    </select>
+</mapper>

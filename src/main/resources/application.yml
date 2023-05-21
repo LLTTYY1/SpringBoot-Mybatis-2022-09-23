@@ -1,0 +1,29 @@
+#端口号
+server:
+  port: 8888
+#spring中datasource配置
+spring:
+  datasource:
+#    我们选择我们的德鲁伊数据源
+    type: com.alibaba.druid.pool.DruidDataSource
+#    这里我们填写我们的数据库用户名和密码
+    username: root
+    password: ####
+#    这里填写我们的url地址,注意:不同版本的mysql在url‘?’后拼接的字符是不一样的,这里我的mysql版本是5.7的
+    # 8.0版本以上的url是 jdbc:mysql://localhost:3306/ibcompany?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT
+    # 解释: 端口号是3306 对应数据库是ibcompany
+    url: jdbc:mysql://localhost:3306/ibcompany?characterEncoding=utf8
+    driver-class-name: com.mysql.jdbc.Driver
+mybatis:
+  # mapper映射文件所在的包
+  mapper-locations: classpath:/mapper/*.xml
+  # 实体类所在的包
+  type-aliases-package: com.lty.enity
+
+  configuration:
+    # 将下划线映射成驼峰
+    map-underscore-to-camel-case: true
+    # 按需加载关闭
+    aggressive-lazy-loading: false
+#    这里开启打印日志,他会帮助我们生成对应的sql语句
+    log-impl: org.apache.ibatis.logging.log4j.Log4jImpl

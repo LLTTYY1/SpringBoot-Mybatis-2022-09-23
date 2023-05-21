@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lty.dao.UserDao">
+
+    <resultMap id="getAllUserMap" type="User">
+        <result property="id" column="id"></result>
+        <result property="deptId" column="dept_id"></result>
+<!--        其中的deptName是多对一的关系，这里我们采用association-->
+<!--        select中我们写的是下一个查询的路径，也就是查询dept表的方法-->
+        <association property="deptName" select="com.lty.dao.DeptDao.getDeptName" column="dept_id"></association>
+    </resultMap>
+
+    <insert id="insertUser">
+        insert into ib_user
+        values (null,#{user.name},#{user.address},#{user.deptId});
+    </insert>
+
+    <update id="UpdateUserById">
+        update ib_user
+        set address = #{address}
+        where id = #{id};
+    </update>
+    <delete id="deleteById">
+        delete from ib_user
+          where id = #{id};
+    </delete>
+
+    <select id="getAllUser" resultMap="getAllUserMap">
+        select * from ib_user;
+    </select>
+
+    <select id="getAllUserByPage" resultType="com.lty.enity.User">
+        select * from ib_user
+    </select>
+    <select id="getAllUserByPageAndName" resultType="com.lty.enity.User">
+        select * from ib_user
+             <where>
+                 <if test="name != null and name != ''">
+                     and name like '%${name}%'
+                 </if>
+             </where>
+    </select>
+
+    <select id="getUsers" resultType="User">
+         select * from ib_user
+            where dept_id = #{deptId}
+    </select>
+
+</mapper>

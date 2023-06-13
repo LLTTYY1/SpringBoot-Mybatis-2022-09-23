@@ -49,13 +49,9 @@
 
 同时在Maven中检查一下依赖是否完全导入
 
-<<<<<<< HEAD
 ![](https://raw.githubusercontent.com/LLTTYY1/images/master/20230613092350.png)
 
 
-=======
-![依赖检查](C:\Users\刘泰源\AppData\Roaming\Typora\typora-user-images\image-20230520123710333.png)
->>>>>>> 3d9c059275e3794ec3d080a6df633647e97fe2a5
 
 
 
@@ -63,11 +59,7 @@
 
 我们在resources目录下创建application.yml的文件
 
-<<<<<<< HEAD
 ![](https://raw.githubusercontent.com/LLTTYY1/images/master/20230613092547.png)
-=======
-![image-20230520123908536](C:\Users\刘泰源\AppData\Roaming\Typora\typora-user-images\image-20230520123908536.png)
->>>>>>> 3d9c059275e3794ec3d080a6df633647e97fe2a5
 
 在application.yml文件中我们编写配置信息：
 
@@ -112,19 +104,11 @@ mybatis:
 
 1. win+r 输入cmd + 回车
 2. 在控制台输入mysql --version
-<<<<<<< HEAD
 3. ![](https://raw.githubusercontent.com/LLTTYY1/images/master/20230613092609.png)
 
 同时添加log4j的配置文件
 
 ![](https://raw.githubusercontent.com/LLTTYY1/images/master/20230613092628.png)
-=======
-3. ![image-20230520172305349](C:\Users\刘泰源\AppData\Roaming\Typora\typora-user-images\image-20230520172305349.png)
-
-同时添加log4j的配置文件
-
-![image-20230520130342942](C:\Users\刘泰源\AppData\Roaming\Typora\typora-user-images\image-20230520130342942.png)
->>>>>>> 3d9c059275e3794ec3d080a6df633647e97fe2a5
 
 ````xml
 <?xml version="1.0" encoding="UTF-8" ?>
@@ -152,11 +136,7 @@ mybatis:
 
 ### 代码分层
 
-<<<<<<< HEAD
 ![](https://raw.githubusercontent.com/LLTTYY1/images/master/20230613092647.png)
-=======
-![image-20230520130625712](C:\Users\刘泰源\AppData\Roaming\Typora\typora-user-images\image-20230520130625712.png)
->>>>>>> 3d9c059275e3794ec3d080a6df633647e97fe2a5
 
 controller: 控制层负责编写控制用户访问代码
 
@@ -270,11 +250,7 @@ UserMapper.xml
 
 #### service:
 
-<<<<<<< HEAD
 ![](https://raw.githubusercontent.com/LLTTYY1/images/master/20230613092713.png)
-=======
-![image-20230520155024519](C:\Users\刘泰源\AppData\Roaming\Typora\typora-user-images\image-20230520155024519.png)
->>>>>>> 3d9c059275e3794ec3d080a6df633647e97fe2a5
 
 我们service层一般是一个接口对应的一个实现类。并且实现类和接口分开进行放置。
 
@@ -322,11 +298,7 @@ public class UserServiceImpl implements UserService {
 
 @Controller：则是用来标识这Controller控制层。
 
-<<<<<<< HEAD
 ![](https://raw.githubusercontent.com/LLTTYY1/images/master/20230613092738.png)
-=======
-![image-20230520173146874](C:\Users\刘泰源\AppData\Roaming\Typora\typora-user-images\image-20230520173146874.png)
->>>>>>> 3d9c059275e3794ec3d080a6df633647e97fe2a5
 
 @RequestMapping：
 
@@ -356,19 +328,11 @@ public class UserController{
 
 这里我使用的是postman。
 
-<<<<<<< HEAD
 ![](https://raw.githubusercontent.com/LLTTYY1/images/master/20230613092754.png)
 
 我们可以看到已经发送成功，并且拿到了我们所需要的数据。
 
 ![](https://raw.githubusercontent.com/LLTTYY1/images/master/20230613092806.png)
-=======
-![success](C:\Users\刘泰源\AppData\Roaming\Typora\typora-user-images\image-20230520173912009.png)
-
-我们可以看到已经发送成功，并且拿到了我们所需要的数据。
-
-![控制台](C:\Users\刘泰源\AppData\Roaming\Typora\typora-user-images\image-20230520174012814.png)
->>>>>>> 3d9c059275e3794ec3d080a6df633647e97fe2a5
 
 在控制台也打印出了我们的查询语句。
 
@@ -393,11 +357,7 @@ public class UserController{
 
 从中我们可以看出PageInfo拥有很多的属性
 
-<<<<<<< HEAD
 ![](https://raw.githubusercontent.com/LLTTYY1/images/master/20230613092826.png)
-=======
-![image-20230520204714434](C:\Users\刘泰源\AppData\Roaming\Typora\typora-user-images\image-20230520204714434.png)
->>>>>>> 3d9c059275e3794ec3d080a6df633647e97fe2a5
 
 我们用的比较多的
 
@@ -464,19 +424,11 @@ Controller层:
 
 #### 测试:
 
-<<<<<<< HEAD
 ![](https://raw.githubusercontent.com/LLTTYY1/images/master/20230613092838.png)
 
 IDEA控制台:
 
 ![](https://raw.githubusercontent.com/LLTTYY1/images/master/20230613092852.png)
-=======
-![image-20230520205930212](C:\Users\刘泰源\AppData\Roaming\Typora\typora-user-images\image-20230520205930212.png)
-
-IDEA控制台:
-
-![image-20230520210004318](C:\Users\刘泰源\AppData\Roaming\Typora\typora-user-images\image-20230520210004318.png)
->>>>>>> 3d9c059275e3794ec3d080a6df633647e97fe2a5
 
 当我们想查看第二页，我们只需要在postman中输入pageNum=2,就可以查看到第二页。
 
@@ -519,11 +471,7 @@ controller:
 
 #### 测试:
 
-<<<<<<< HEAD
 ![](https://raw.githubusercontent.com/LLTTYY1/images/master/20230613092916.png)
-=======
-![image-20230520212242478](C:\Users\刘泰源\AppData\Roaming\Typora\typora-user-images\image-20230520212242478.png)
->>>>>>> 3d9c059275e3794ec3d080a6df633647e97fe2a5
 
 ## Mybatis的分布查询
 
@@ -582,11 +530,7 @@ controller:
 
    这里我们进行测试:
 
-<<<<<<< HEAD
    ![](https://raw.githubusercontent.com/LLTTYY1/images/master/20230613092929.png)
-=======
-   ![image-20230521132501430](C:\Users\刘泰源\AppData\Roaming\Typora\typora-user-images\image-20230521132501430.png)
->>>>>>> 3d9c059275e3794ec3d080a6df633647e97fe2a5
 
    可以看到这个测试出来的数据就比较全面。
 
@@ -647,19 +591,11 @@ controller:
 
    测试:
 
-<<<<<<< HEAD
    ![](https://raw.githubusercontent.com/LLTTYY1/images/master/20230613092945.png)
 
 我们也可以看控制台的查询语句（2句sql）
 
 ![](https://raw.githubusercontent.com/LLTTYY1/images/master/20230613092956.png)
-=======
-   ![image-20230521135304233](C:\Users\刘泰源\AppData\Roaming\Typora\typora-user-images\image-20230521135304233.png)
-
-我们也可以看控制台的查询语句（2句sql）
-
-![image-20230521135337342](C:\Users\刘泰源\AppData\Roaming\Typora\typora-user-images\image-20230521135337342.png)
->>>>>>> 3d9c059275e3794ec3d080a6df633647e97fe2a5
 
 ## Mybatis的其他语句
 
@@ -683,11 +619,7 @@ UserMapper.xml:
 
 **注意:标签为update**
 
-<<<<<<< HEAD
 ![](https://raw.githubusercontent.com/LLTTYY1/images/master/20230613093040.png)
-=======
-![image-20230521140323065](C:\Users\刘泰源\AppData\Roaming\Typora\typora-user-images\image-20230521140323065.png)
->>>>>>> 3d9c059275e3794ec3d080a6df633647e97fe2a5
 
 ### delete:
 
@@ -705,19 +637,11 @@ UserMapper.xml:
 </delete>
 ```
 
-<<<<<<< HEAD
 ![](https://raw.githubusercontent.com/LLTTYY1/images/master/20230613093051.png)
 
 控制台(可见执行了delete语句):
 
 ![](https://raw.githubusercontent.com/LLTTYY1/images/master/20230613093022.png)
-=======
-![image-20230521140830773](C:\Users\刘泰源\AppData\Roaming\Typora\typora-user-images\image-20230521140830773.png)
-
-控制台(可见执行了delete语句):
-
-![image-20230521140857758](C:\Users\刘泰源\AppData\Roaming\Typora\typora-user-images\image-20230521140857758.png)
->>>>>>> 3d9c059275e3794ec3d080a6df633647e97fe2a5
 
 ### Insert:
 
@@ -738,17 +662,10 @@ UserMapper.xml
 
 从控制台可以看到添加成功！
 
-<<<<<<< HEAD
 ![](https://raw.githubusercontent.com/LLTTYY1/images/master/20230613093012.png)
-=======
-![image-20230521141815784](C:\Users\刘泰源\AppData\Roaming\Typora\typora-user-images\image-20230521141815784.png)
->>>>>>> 3d9c059275e3794ec3d080a6df633647e97fe2a5
 
 ## 小结
 
 这篇博客有点长，博主个人觉得写的还是挺细的，希望能对初学者有帮助。同时这篇博客的源码也会同步到博主的github上。希望大家多点点赞和关注。LeetCode每日一题还是会更的，只是最近事太多了。
 
-<<<<<<< HEAD
 代码地址:https://github.com/LLTTYY1/SpitngBoot-Mybatis.git
-=======
->>>>>>> 3d9c059275e3794ec3d080a6df633647e97fe2a5

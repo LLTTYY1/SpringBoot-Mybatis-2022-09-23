@@ -47,5 +47,14 @@
          select * from ib_user
             where dept_id = #{deptId}
     </select>
+<!--    List<User> getAllUserByUserName(@Param("name") String username);-->
+    <select id="getAllUserByUserName" resultType="com.lty.enity.User">
+        select * from ib_user
+            <where>
+                <if test="name != null and name != ''">
+                     and name like '%${name}%'
+                </if>
+            </where>
+    </select>
 
 </mapper>

@@ -1,5 +1,6 @@
 package com.lty.service.impl;
 
+import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.lty.dao.UserDao;
@@ -70,5 +71,13 @@ public class UserServiceImpl implements UserService {
     @Override
     public int insertUser(User user) {
         return userDao.insertUser(user);
+    }
+
+    @Override
+    public PageInfo<User> getAllUserByUserName(String name) {
+        PageQuery pageQuery = new PageQuery();
+        //开启分页功能用PageHelper(PageHelper里面只给传递2个是参数，一个是起始页码，一个是每页的个数)
+        PageHelper.startPage(pageQuery.getPageNum(),pageQuery.getPageSize());
+        return new PageInfo<User>(userDao.getAllUserByUserName(name));
     }
 }

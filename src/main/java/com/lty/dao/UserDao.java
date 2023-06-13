@@ -30,4 +30,6 @@ public interface UserDao {
        int deleteById(@Param("id") Integer id);
 
        int insertUser(@Param("user") User user);
+//       模糊查询
+       List<User> getAllUserByUserName(@Param("name") String username);
 }

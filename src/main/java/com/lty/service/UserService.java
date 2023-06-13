@@ -23,4 +23,6 @@ public interface UserService {
     int deleteById(int id);
 
     int insertUser(User user);
+//    模糊查询
+    PageInfo<User> getAllUserByUserName(String name);
 }

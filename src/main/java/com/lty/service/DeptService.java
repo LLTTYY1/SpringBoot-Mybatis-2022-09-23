@@ -9,4 +9,5 @@ import com.lty.enity.Dept;
  */
 public interface DeptService {
     Dept getDeptById(Integer deptId);
+
 }

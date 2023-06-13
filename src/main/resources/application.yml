@@ -8,7 +8,7 @@ spring:
     type: com.alibaba.druid.pool.DruidDataSource
 #    这里我们填写我们的数据库用户名和密码
     username: root
-    password: ####
+    password: 123456
 #    这里填写我们的url地址,注意:不同版本的mysql在url‘?’后拼接的字符是不一样的,这里我的mysql版本是5.7的
     # 8.0版本以上的url是 jdbc:mysql://localhost:3306/ibcompany?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT
     # 解释: 端口号是3306 对应数据库是ibcompany
